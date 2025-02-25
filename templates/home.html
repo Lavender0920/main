@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors List</title>
+</head>
+<body>
+    <h1>Authors</h1>
+    <ul>
+        {% for author in authors %}
+            <li>
+                <a href="{{ url_for('read_author', id=author.id) }}">{{ author.name }}</a>
+                <a href="{{ url_for('update_author', id=author.id) }}">Edit</a>
+                <a href="{{ url_for('delete_author', id=author.id) }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('create_author') }}">Add New Author</a>
+</body>
+</html>

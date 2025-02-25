@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+    <h1>Add Book for {{ author.name }}</h1>
+    <form method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" required><br>
+        <button type="submit">Add Book</button>
+    </form>
+    <a href="{{ url_for('read_author', id=author.id) }}">Back to {{ author.name }}</a>
+</body>
+</html>
